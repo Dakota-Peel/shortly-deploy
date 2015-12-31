@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         dist: {
           src: [
             // 'public/lib/**/*.js',
-            'public/client/**/*.js'
+            'public/client/*/*.js'
           ],
           dest: 'public/dist/production.js',
         }
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     mochaTest: {
       test: {
         options: {
-          reporter: 'spec'
+          reporter: 'spec',
         },
         src: ['test/**/*.js']
       }
@@ -115,6 +115,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'concat',
     'uglify',
+    'mochaTest',
     'jshint',
     'cssmin'
   ]);
