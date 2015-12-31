@@ -4,13 +4,13 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     
     concat: {
-        // dist: {
+        dist: {
           src: [
             // 'public/lib/**/*.js',
             'public/client/**/*.js'
           ],
           dest: 'public/dist/production.js',
-        // }
+        }
     },
 
     mochaTest: {
