@@ -7,7 +7,7 @@ module.exports = function(grunt) {
       dist: {
         src: [
           // 'public/lib/**/*.js',
-          'public/client/**/*.js'
+          'public/client/*.js'
         ],
         dest: 'public/dist/production.js',
       }
