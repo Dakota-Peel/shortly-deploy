@@ -135,5 +135,9 @@ module.exports = function(grunt) {
     'server-dev'
   ]);
 
+  grunt.registerTask('default', [
+    'build'
+  ]);
+
 
 };
