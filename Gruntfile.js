@@ -4,17 +4,13 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     
     concat: {
-        options: {
-          force: 'true'
-        },
-        
-        dist: {
-          src: [
-            // 'public/lib/**/*.js',
-            'public/client/*/*.js'
-          ],
-          dest: 'public/dist/production.js',
-        }
+      dist: {
+        src: [
+          // 'public/lib/**/*.js',
+          'public/client/**/*.js'
+        ],
+        dest: 'public/dist/production.js',
+      }
     },
 
     mochaTest: {
@@ -45,7 +41,7 @@ module.exports = function(grunt) {
         'public/client/**/*.js'
       ],
       options: {
-        force: 'true',
+        force: 'false',
         jshintrc: '.jshintrc',
         ignores: [
           'public/lib/**/*.js',
