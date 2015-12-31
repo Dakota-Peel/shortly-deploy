@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         options: {
           reporter: 'spec',
         },
-        src: ['test/**/*.js']
+        src: ['test/*.js']
       }
     },
 
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
     jshint: {
       files: [
         // Add filespec list here
-        'public/client/**/*.js'
+        'public/client/*.js'
       ],
       options: {
         force: 'false',
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
     cssmin: {
       target: {
         files: {
-          'public/min.css': ['public/**/*.css']
+          'public/min.css': ['public/*.css']
         }
       }
     },
@@ -61,8 +61,8 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: [
-          'public/client/**/*.js',
-          'public/lib/**/*.js'
+          'public/client/*.js',
+          'public/lib/*.js'
         ],
         tasks: [
           'concat',
